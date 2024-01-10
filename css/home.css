@@ -1,0 +1,445 @@
+*{
+    cursor: url('../img/cursorAuto.cur'),auto;
+    font-family: "Lexend";
+}
+
+body{
+    background-color: #13E900;
+    background-image: url(../img/logobug.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 99.99%;
+    background-position-y: 0%;
+}
+
+.app{
+    position: absolute;
+    width: 400px;
+    height: 350px;
+    margin: 20px;
+    top: -1000px;
+    border: #13E900 solid 1px;
+    z-index: 10;
+}
+
+.bodyApp{
+    color: #13E900;
+    background-color:#022402;
+    position: absolute;
+    width: 100%;
+    height: 90%;
+    top: 10%;
+    left: 0px;
+}
+
+button{
+    background-color: #020203;
+    border: #012b01 solid 0.5px;
+    text-transform: uppercase;
+    margin: 5px 5px 0 0;
+    padding: 5px 5px 0 #fff;
+    position: relative;
+    color: #13E900;
+    text-decoration: none;
+    text-shadow:  -2px 0 1px rgba(255, 0, 0, 0.6), 2px 0 1px rgba(55, 0, 255, 0.6);
+}
+  
+button.selected {
+    color: #fff;
+    font-weight: bold;
+}
+  
+button.loaded {
+    display:block;
+}
+
+button.loaded:after {
+    display:block;
+    box-shadow: 1px 1px 0 rgb(76, 0, 255), -1px -1px 0 #13E900;
+    -webkit-animation-fill-mode: forward; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forward;
+    top: 0%; right: 0%; width: 0%; height: 0%;
+    display: block;
+    content: "";
+    position: absolute;
+    background: #fff;
+    animation: glitch 1.2s 1;
+}
+  
+button.loaded:before {
+    display:block;
+    box-shadow: 1px 1px 0 #f00, -1px -1px 0 #13E900;
+    -webkit-animation-fill-mode: forward; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forward;
+    top: 0%; right: 0%; width: 0%; height: 0%;
+    display: block;
+    content: "";
+    position: absolute;
+    background: #fff;
+    animation: glitch 1.6s 1;
+}
+  
+button:hover {
+    animation: glitch2 0.82s infinite;
+}
+  
+button:hover:after {
+    box-shadow: 1px 1px 0 #f00, -1px -1px 0 #13E900;
+    -webkit-animation-fill-mode: forward; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forward;
+    top: 0%; right: 0%; width: 0%; height: 0%;
+    display: block;
+    content: "";
+    position: absolute;
+    background: #fff;
+    animation: glitch 1.2s infinite;
+}
+
+button:after {
+    box-shadow: 1px 1px 0 #f00, -1px -1px 0 #13E900;
+    -webkit-animation-fill-mode: forward; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forward;
+    top: 0%; right: 0%; width: 0%; height: 0%;
+    display: block;
+    content: "";
+    position: absolute;
+    background: #fff;
+    animation: glitch 1.2s 1;
+}
+  
+button:before {
+    box-shadow: 1px 1px 0 #f00, -1px -1px 0 #13E900;
+    -webkit-animation-fill-mode: forward; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forward;
+    top: 0%; right: 0%; width: 0%; height: 0%;
+    display: block;
+    content: "";
+    position: absolute;
+    background: #fff;
+    animation: glitch 1.6s 1;
+    background: repeating-linear-gradient( -45deg, #fff, #fff 1px, transparent 1px, transparent 2px);
+}
+  
+button:hover:before {
+    box-shadow: 1px 1px 0 #f00, -1px -1px 0 #13E900;
+    -webkit-animation-fill-mode: forward; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forward;
+    width: 0%;
+    height: 0%;
+    top:  0%;
+    right: 0%;
+    display: block;
+    content: "";
+    position: absolute;
+    background: #fff;
+    animation: glitch 0.5s infinite alternate;
+}
+  
+@keyframes glitch2 {
+    0% { text-shadow: 0 0 0 #fff; color:transparent;}
+    1% { text-shadow: 0 0 0 #fff; }
+    2% { text-shadow: 15px 15px 0 #f00; }
+    3% {
+      color:transparent;
+    }
+    4% { text-shadow: 0 0 0 #fff; color:white;
+    }
+    50% { text-shadow: 0 0 0 #f0f; background: none; }
+    51% { text-shadow: -15px -15px 0 #13E900;
+    background: repeating-linear-gradient( 45deg, #fff, #fff 2px, transparent 2px, transparent 4px);
+    }
+    55% {
+        text-shadow: 0 0 0 #f0f;
+        background: none;
+    }
+    88% { 
+        text-shadow: 0 0 0 #f0f;
+        background: none;
+    text-shadow:  -2px 0 1px rgba(255,255,255,0.6), 2px 0 1px rgba(255,255,255,0.6);
+    }
+    90% { text-shadow: -15px -15px 0 #f0f;
+        background: none;
+    }
+    91% { text-shadow: 0 0 0 #f0f;
+    background: repeating-linear-gradient( -45deg, #0ff, #0ff 1px, transparent 1px, transparent 2px);
+    }
+    95% {
+        text-shadow: 0 0 0 #f0f;
+        background: none;
+    }
+    100% {
+        text-shadow: 0 0 0 #f0f;
+    } 
+}
+  
+@keyframes glitch {    
+    0% { opacity: 0; top: 0%; right: 0%; width: 0%; height: 0%; }
+    1% { opacity: 1; top: 0%; right: 0%; width: 100%; height: 100%; }
+    3% { opacity: 0; top: 0%; right: 0%; width: 0%; height: 0%; }
+    
+    40% { opacity: 0; top: 0%; left: 0%; width: 0%; height: 0%; }
+    41% { opacity: 1; top: 0%; left: 0%; width: 100%; height: 100%; }
+    44% { opacity: 0; top: 0%; left: 0%; width: 0%; height: 0%; }
+    
+    50% { opacity: 0; top: 0%; right: 0%; width: 0%; height: 0%; }
+    51% { opacity: 1; top: 0%; right: 0%; width: 100%; height: 100%; }
+    53% { opacity: 0; top: 0%; right: 0%; width: 0%; height: 0%; }
+    
+    93% { opacity: 0; top: 0%; left: 0%; width: 0%; height: 0%; }
+    94% { opacity: 1; top: 0%; left: 0%; width: 100%; height: 100%; }
+    95% { opacity: 0; top: 0%; left: 0%; width: 0%; height: 0%; }
+}    
+
+.icon{
+    position: initial;
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+    display: block;
+    background-color: none;
+    margin: 20px 10px;
+}
+
+.icon:hover{
+    animation: glitch2 0.2s infinite;
+}
+
+/* Taskbar______________________________________________________________________________________________________________________ */
+.taskbar {
+    position: fixed;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    background: #020203;
+    border-top: solid rgb(1, 7, 1);
+    left: 0px;
+  }
+  
+  .taskbar .icons-left {
+    height: 50px;
+    display: inline-block;
+  }
+  
+
+/* Corpo da Calculadora_________________________________________________________________________________________________________*/
+.calci{
+    background-image: url(../img/calc.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.calcKey{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #020203;
+    color: #13E900;
+    border: 0px;
+    top: 18px;
+}
+
+.calc_body{
+    width: 100%;
+    height: 90%;
+    top: 10%;
+}
+
+.calculatorApp{
+    top: -100%;
+}
+
+.lblResult{
+    top: 2px;
+    left: 4px;
+    height: 20px;
+    position: absolute;
+    overflow: hidden;
+    text-align: start;
+    width: 240px;
+}
+
+/* Corpo do Bloco de Notas______________________________________________________________________________________________________________*/
+.blocoi{
+    background-image: url(../img/notes.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+
+.wordi textarea{
+    height: 98%;
+    resize: none;
+    width: 98.5%;
+}
+
+
+/* Corpo do Bot/Instrutor Karl______________________________________________________________________________________________________________*/
+.boti{
+    background-image: url(../img/Instrutor.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#chatApp .bodyApp{
+    background-color: #020203;
+    border-bottom: #13E900 solid 0.5px;
+    border-top: #13E900 solid 0.5px;
+}
+
+#conversation {
+    position: absolute;
+    width: 90%;
+    padding: 20px;
+}
+
+/* mensagem do chat */
+#message{
+    background-color: none;
+    position: relative;
+}
+
+
+/* botão chat */
+#options button{
+    background-color: #020203;
+    color: #13E900;
+    position: relative;
+    outline: none;
+    stroke: none;
+    border: none;
+    top: 20px;
+}
+
+
+/* Corpo do Missions______________________________________________________________________________________________________________*/
+.missi{
+    background-image: url(../img/missoes.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+/* Corpo do Terminal______________________________________________________________________________________________________________*/
+.terminali{
+    background-image: url(../img/Terminal.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+#consoleApp{
+    top: -100%;
+    left: 0px;
+}
+
+#outputConsole{
+    background-color: #020203;
+    border-color: #020203;
+    color: #13E900;
+    height: 80%;
+    left: 0px;
+    position: relative;
+    resize: none; 
+    top: 0px;
+    width: 98.5%;
+}
+
+#inputConsole{
+    background-color: #020203;
+    border-color: #020203;
+    bottom: 0px;
+    color: #13E900;
+    height: 15%;
+    left: 0px;
+    margin: none;
+    position: relative;
+    text-decoration: none;
+    width: 98%;
+}
+
+/* Header dos Aplicativos_________________________________________________________________________________________________________*/
+.exitApp{
+    background-color: #020203;
+    background-image: url(../img/Fechar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: none;
+    height: 20px;
+    left: 70%;
+    width: 20px;
+}
+
+.expandApp{
+    background-color: #020203;
+    background-image: url(../img/Maxmizar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: none;
+    height: 20px;
+    left: 70%;
+    width: 20px;
+}
+
+.headerActionBtn{
+    position: relative;
+    margin: 1px;
+    top: 5px;
+    left: 80%;
+    border: none;
+}
+
+.headerApp{
+    position: absolute;
+    width: 100%;
+    height: 10%;
+    top: 0px;
+    left: 0px;
+    user-select: none;
+    background-color: #020203;
+}
+
+.minimizeApp{
+    background-color: #020203;
+    background-image: url(../img/Minimizar.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: none;
+    height: 20px;
+    width: 20px;
+}
+
+
+/* Fontes_________________________________________________________________________________________________________*/
+@font-face{
+    font-family: "Lexend" ;
+    src: url(../img/Lexend-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face{
+    font-family: "Lexend" ;
+    src: url(../img/Lexend-Bold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+
+@font-face{
+    font-family: "Lexend" ;
+    src: url(../img/Lexend-ExtraBold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: bolder;
+
+}
+
+@font-face{
+    font-family: "Lexend" ;
+    src: url(../img/Lexend-Light.ttf) format('truetype');
+    font-style: normal;
+    font-weight: lighter;
+}
